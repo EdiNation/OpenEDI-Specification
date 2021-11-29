@@ -102,3 +102,20 @@ EDI Data Elements are the actual units of data and can appear in a specific posi
 
 ![Example of EDI data element](https://support.edifabric.com/hc/article_attachments/360019345637/openapi-edi-element-id.png)  
 *Example of EDI data element ReferenceIdentificationQualifier_01*
+
+### EDI Syntax Rules
+EDI Syntax Rules define all intra-segment (intra-composite data element) dependencies, such as when the data element for first line of address exists, then the data element for post code must also exist. Syntax rules are defined on segment/composite data element level with the following extension property:
+
+- `x-edination-syntax` An array of items that represent all syntax rules in the segment/composite data element. Optional.
+
+The format of each array item must be `{condition designator}{start position}[other positions]{end position}` where:
+1. `{start position}, {end position}` and all other positions in-between must be two-digit numeric values, 0 to 9 must be padded with a leading zero.
+2. `{condition designator}` must be one of the following values:
+   - `P` Paired. If any of the elements in the specified positions is not null, then all the elements in the specified positions must be not null.
+   - `R` Required. At least one of the elements in the specified positions must be not null.
+   - `E` Exclusion. Only one of the EDI data elements in the specified positions must be not null.
+   - `C` Conditional. If the EDI data element in the first position is not null then all elements at the specified positions must also be not null.
+   - `L` List Conditional. If any of the elements in the specified positions is not null then at least one more of the EDI data elements in the specified positions must also be not null. 
+
+![Example of EDI syntax rules](https://support.edifabric.com/hc/article_attachments/4404421186577/edination-situational.png)  
+*Example of EDI syntax rules*
