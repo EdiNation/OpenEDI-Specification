@@ -10,7 +10,7 @@ The OpenEDI Specification defines a standard, language-agnostic, and format-agno
 - [Definitions](https://github.com/EdiNation/OpenEDI-Specification/blob/main/README.md#definitions)
   - [EDI and HL7](https://github.com/EdiNation/OpenEDI-Specification/blob/main/README.md#edi-and-hl7)
   - [OpenAPI](https://github.com/EdiNation/OpenEDI-Specification/blob/main/README.md#openapi)
-  - [EDI and OpenAPI, together]()
+  - [EDI and OpenAPI, together](https://github.com/EdiNation/OpenEDI-Specification/blob/main/README.md#edi-and-openapi-together)
   - [OpenEDI and SEF]()
   - [OpenEDI contributors]()
 - [OpenEDI is an extension of OpenAPI](https://github.com/EdiNation/OpenEDI-Specification/blob/main/README.md#openedi-is-an-extension-of-openapi)
