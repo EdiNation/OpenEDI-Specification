@@ -137,24 +137,24 @@ EDI Data Elements are the actual units of data and can appear in a specific posi
 *Example of EDI data element ReferenceIdentificationQualifier_01*
 
 ### EDI Syntax Rules
-EDI Syntax Rules define all intra-segment (intra-composite data element) dependencies, such as when the data element for first line of address exists, then the data element for post code must also exist. Syntax rules are defined on segment/composite data element level with the following extension property:
+EDI Syntax Rules define all intra-segment (intra-composite data element) dependencies, such as when the data element for the first line of address exists, then the data element for postcode must also exist. Syntax rules are defined on segment/composite data element level with the following extension property:
 
 - `x-edination-syntax` An array of items that represent all syntax rules in the segment/composite data element. Optional.
 
 The format of each array item must be `{condition designator}{start position}[other positions]{end position}` where:
 1. `{start position}, {end position}` and all other positions in-between must be two-digit numeric values, 0 to 9 must be padded with a leading zero.
 2. `{condition designator}` must be one of the following values:
-   - `P` Paired. If any of the elements in the specified positions is not null, then all the elements in the specified positions must be not null.
-   - `R` Required. At least one of the elements in the specified positions must be not null.
-   - `E` Exclusion. Only one of the EDI data elements in the specified positions must be not null.
-   - `C` Conditional. If the EDI data element in the first position is not null then all elements at the specified positions must also be not null.
-   - `L` List Conditional. If any of the elements in the specified positions is not null then at least one more of the EDI data elements in the specified positions must also be not null. 
+   - `P` Paired. If any of the elements in the specified positions is not null, then all the elements in the specified positions must not be null.
+   - `R` Required. At least one of the elements in the specified positions must not be null.
+   - `E` Exclusion. Only one of the EDI data elements in the specified positions must not be null.
+   - `C` Conditional. If the EDI data element in the first position is not null, then all elements at the specified positions must also be not null.
+   - `L` List Conditional. If any of the elements in the specified positions is not null, then at least one more of the EDI data elements in the specified positions must also be not null. 
 
 ![Example of EDI syntax rules](https://support.edifabric.com/hc/article_attachments/360019345797/openapi-edi-syntax-notes.png)  
 *Example of EDI syntax rules*
 
 ### EDI Situational Rules
-EDI Situational Rules define intra-segment (composite data element) conditions, very much like the syntax rules, however, instead of checking for existance/non-exsistance, the situational rules check if a data element in a certain position exists or is of a certain value, then another data element needs to conform to be of another value(s). Situational rules are defined on segment/composite data element level with the following extension property:
+EDI Situational Rules define intra-segment (composite data element) conditions, very much like the syntax rules; however, instead of checking for existence/non-existence, the situational rules check if a data element in a certain position exists or is of a certain value, then another data element needs to conform to be of another value(s). Situational rules are defined on segment/composite data element level with the following extension property:
 
 - `x-edination-situational` An array of items that represent all situational rules in the segment/composite data element. Optional.
 
@@ -165,7 +165,7 @@ where:
 1. `{start position}, {end position}` and all other positions in-between must be two-digit numeric values, 0 to 9 must be padded with a leading zero.
 2. `{value1}`, and all other values must be separated by _ (underscore).
 3. `{condition designator}` must be one of the following values:
-   - `R` Conditional Required. When the element in the second position is equal to one of the specified codes, then the first element must be not null.
+   - `R` Conditional Required. When the element in the second position is equal to one of the specified codes, then the first element must not be null.
    - `E` Conditional Exclusion. When the element in the second position is equal to one of the specified codes, then the first element must be null.
    - `N` Not used. When a "Not Used" data element's value is not null, it is marked as a validation error.
 
@@ -173,18 +173,18 @@ where:
 *Example of EDI situational rules*
 
 ### Additional grouping of EDI Loops or EDI Segments
-Usually segments are grouped in loops, where each segment must have a distinct position within the loop, and the first segment in a loop is known as "trigger segment", is mandatory, and can only repeat once. A repetition of the trigger segment means that the whole loop is being repeated.
+Usually, segments are grouped in loops, where each segment must have a distinct position within the loop, and the first segment in a loop, known as "trigger segment", is mandatory and can only repeat once. A repetition of the trigger segment means that the whole loop is being repeated.
 
 OpenEDI fits multiple B2B and Healthcare formats and thus needs to cater for the following extra adjustments:
 - Segments or loops that can appear in the same position (X12 HIPAA).
-- Multiple segments or loops are allowed in the same position, but only one of the them can be present (HL7).
-- Multiple segments can be grouped together in a sequence very much like in EDI Loops, however, the first segment is not mandatory (HL7).
+- Multiple segments or loops are allowed in the same position, but only one of them can be present (HL7).
+- Multiple segments can be grouped together in a sequence, very much like in EDI Loops; however, the first segment is not mandatory (HL7).
 
 These additional types of grouping are defined as Schema objects with the following extension property:
 
 - `x-edination-group-type` which can take the following values:
   - `anyOf` for segments or loops that can appear in the same position, in any order
-  - `oneOf` for segments or loops that can appear in the same position, however, only one of them must be present
+  - `oneOf` for segments or loops that can appear in the same position; however, only one of them must be present
   - `seqOf` for segments that can appear in order, however, can't be represented as EDI Loops because the first segment is optional
 
 ![Example of EDI segments in the same position](https://support.edifabric.com/hc/article_attachments/4404421585169/edination-all.png)  
