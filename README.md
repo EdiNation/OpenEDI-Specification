@@ -94,3 +94,11 @@ EDI Composite Data Elements are blocks of data elements which allow the whole bl
 
 ![Example of EDI composite data element](https://support.edifabric.com/hc/article_attachments/360019345517/openapi-edi-composite-id.png)  
 *Example of EDI composite data element C040*
+
+### EDI Data Element
+EDI Data Elements are the actual units of data and can appear in a specific position in either a segment or a composite data element. Data elements can also be repeatable, with (X12) or without (EDIFACT) a repetition charcter. Data Elements are defined as primitive properties of a Schema object, with type `string` and the following extension property:
+
+- `x-edination-element-id` The data element ID. Required.
+
+![Example of EDI data element](https://support.edifabric.com/hc/article_attachments/360019345637/openapi-edi-element-id.png)  
+*Example of EDI data element ReferenceIdentificationQualifier_01*
