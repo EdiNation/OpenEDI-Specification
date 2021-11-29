@@ -31,6 +31,9 @@ OpenEDI aims to support all parts of the SEF format, and to provide web and API-
 ### OpenEDI contributors
 The OpenEDI Specification was created by [EdiFabric](https://www.edifabric.com/) to support their API and Web products for modern EDI development, collectively known as [EdiNation](https://www.edination.com/). All examples in this document refer to concrete applications of the OpenEDI format in EdiNation. 
 
+## Table of Contents   
+- [OpenEDI is an extension of OpenAPI]()
+
 ## OpenEDI is an extension of OpenAPI
 To model an EDI format using OpenAPI is to provide an OpenAPI definition file, with the addition of a few extension attributes.
 
