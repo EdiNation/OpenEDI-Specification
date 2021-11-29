@@ -29,3 +29,8 @@ OpenEDI supports OpenAPI 3+.
 
 ### Integration with OpenAPI
 The only required OpenAPI objects are Component and Schema. All other top level objects, Info, Security, Tags, Paths, Servers are ignored.
+
+### Resolved or unresolved
+OpenEDI supports resolved OpenAPI schemas. All objects that contain one or more other objects must be defined using references to those objects using the Reference object.
+
+![OpenEDI example 837P](https://support.edifabric.com/hc/article_attachments/360019345057/openapi-edi-format.png)
