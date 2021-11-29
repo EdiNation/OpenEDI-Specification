@@ -169,5 +169,5 @@ In X12, service line numbers must be sequential, e.g., the values in the first d
 
 - `x-edination-loop-seq` To denote the segment within a repeating loop, that needs to be checked for sequential numbers, such as LX. The value is the position of the data element within the segment. Optional.
 
-![Example of EDI sequence](https://support.edifabric.com/hc/article_attachments/4404421761169/edination-loop-seq.png  
+![Example of EDI sequence](https://support.edifabric.com/hc/article_attachments/4404421761169/edination-loop-seq.png)  
 *Example of EDI sequence in loop 2400*
