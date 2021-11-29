@@ -48,11 +48,11 @@ We combined the two, and now every EDI implementation guideline, regardless of i
 [Interactive example for X12 5010 837P](https://app.swaggerhub.com/apis/EdiNation/edi-nation-837P-example/2)
 
 ### OpenEDI and SEF
-The Standard Exchange Format is an open standard text format, developed by the Foresight Corporation (now part of Tibco). Its purpose is to provide a machine-readable specification for EDI documents. 
+The Standard Exchange Format is an open standard text format developed by the Foresight Corporation (now part of Tibco). Its purpose is to provide a machine-readable specification for EDI documents. 
 
 [SEF Guideline](https://www.edination.com/files/sef161.pdf)
 
-OpenEDI aims to support all parts of the SEF format, and to provide web and API-friendly alternative for a global EDI meta format. EdiNation offer a detailed guide on which parts of [SEF are supported by OpenEDI](https://support.edifabric.com/hc/en-us/articles/360002918137-How-to-migrate-from-SEF-to-OpenAPI), and a free online tool to [convert SEF files into OpenEDI](https://www.edination.com/edi-models-custom.html) definitions.
+OpenEDI aims to support all parts of the SEF format and provide a web and API-friendly alternative for a global EDI meta format. EdiNation offers a detailed guide on which parts of [SEF are supported by OpenEDI](https://support.edifabric.com/hc/en-us/articles/360002918137-How-to-migrate-from-SEF-to-OpenAPI), and a free online tool to [convert SEF files into OpenEDI](https://www.edination.com/edi-models-custom.html) definitions.
 
 ### OpenEDI contributors
 The OpenEDI Specification was created by [EdiFabric](https://www.edifabric.com/) to support their API and Web products for modern EDI development, collectively known as [EdiNation](https://www.edination.com/). All examples in this document refer to concrete applications of the OpenEDI format in EdiNation. 
@@ -95,17 +95,17 @@ EDI implementation guidelines can be seamlessly converted to OpenEDI without los
 All EDI items such as message, loop, segment, or composite/data element are represented as OpenAPI Schema objects and must include their corresponding OpenEDI attribute, which is defined as a regular OpenAPI extension property.
 
 ### EDI Message
-EDI messages represent the different types of B2B, Healthcare or other business documents, such as purchase order, medical claims, or price lists. They are composed of EDI Segments (units of data) and EDI Loops (blocks of EDI Segments), that are ordered and can be repeatable. Messages are defined as Schema objects with the following extension properties:
+EDI messages represent the different types of B2B, Healthcare, or other business documents, such as purchase orders, medical claims, or price lists. They are composed of EDI Segments (units of data) and EDI Loops (blocks of EDI Segments) that are ordered and can be repeatable. Messages are defined as Schema objects with the following extension properties:
 
 - `x-edination-message-standard` The EDI standard, either X12 or EDIFACT. Required.
 - `x-edination-message-id` The message ID. Required.
-- `x-edination-message-version` The EDI edition and release. Required only if multiple messages with the same message ID are included in the same definition to avoid duplicates.
+- `x-edination-message-version` The EDI edition and release. Only required if multiple messages with the same message ID are included in the same definition to avoid duplicates.
 
 ![Example of EDI message definition for message 837P standard X12 and version 005010X222A1](https://support.edifabric.com/hc/article_attachments/360019345437/openapi-edi-message-id.png)  
 *Example of EDI message definition for message 837P standard X12 and version 005010X222A1*
 
 ### EDI Loop (EDI Group)
-EDI Loops represent block of EDI Segments which allows the whole block to repeat as a unit. All segments within a loop are ordered and must have distinct positions. Loops are defined as Schema objects with the following extension property:
+EDI Loops represent a block of EDI Segments which allows the whole block to repeat as a unit. All segments within a loop are ordered and must have distinct positions. Loops are defined as Schema objects with the following extension property:
 
 - `x-edination-loop-id` The loop ID. Required.
 
@@ -121,7 +121,7 @@ EDI Segments represent units of data known as data elements. Segments are define
 *Example of EDI segment PRV*
 
 ### EDI Composite Data Element
-EDI Composite Data Elements are blocks of data elements which allow the whole block to repeat as a unit. Composite Data Elements are defined as Schema objects with the following extension property:
+EDI Composite Data Elements are blocks of data elements that allow the whole block to repeat as a unit. Composite Data Elements are defined as Schema objects with the following extension property:
 
 - `x-edination-composite-id` The composite data element ID. Required.
 
@@ -129,7 +129,7 @@ EDI Composite Data Elements are blocks of data elements which allow the whole bl
 *Example of EDI composite data element C040*
 
 ### EDI Data Element
-EDI Data Elements are the actual units of data and can appear in a specific position in either a segment or a composite data element. Data elements can also be repeatable, with (X12) or without (EDIFACT) a repetition charcter. Data Elements are defined as primitive properties of a Schema object, with type `string` and the following extension property:
+EDI Data Elements are the actual units of data and can appear in a specific position in either a segment or a composite data element. Data elements can also be repeatable, with (X12) or without (EDIFACT) a repetition character. Data Elements are defined as primitive properties of a Schema object, with type `string` and the following extension property:
 
 - `x-edination-element-id` The data element ID. Required.
 
