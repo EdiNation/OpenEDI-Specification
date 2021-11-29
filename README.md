@@ -86,3 +86,11 @@ EDI Segments represent units of data known as data elements. Segments are define
 
 ![Example of EDI segment](https://support.edifabric.com/hc/article_attachments/360019345497/openapi-edi-segment-id.png)  
 *Example of EDI segment PRV*
+
+### EDI Composite Data Element
+EDI Composite Data Elements are blocks of data elements which allow the whole block to repeat as a unit. Composite Data Elements are defined as Schema objects with the following extension property:
+
+- `x-edination-composite-id` The composite data element ID. Required.
+
+![Example of EDI composite data element](https://support.edifabric.com/hc/article_attachments/360019345517/openapi-edi-composite-id.png)  
+*Example of EDI composite data element C040*
