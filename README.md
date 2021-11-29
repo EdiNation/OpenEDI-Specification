@@ -46,7 +46,7 @@ The OpenEDI Specification was created by [EdiFabric](https://www.edifabric.com/)
   - [EDI Data Element](https://github.com/EdiNation/OpenEDI-Specification/blob/main/README.md#edi-data-element)
   - [EDI Syntax Rules](https://github.com/EdiNation/OpenEDI-Specification/blob/main/README.md#edi-syntax-rules)
   - [EDI Situational Rules](https://github.com/EdiNation/OpenEDI-Specification/blob/main/README.md#edi-situational-rules)
-  - [Additional grouping of EDI Loops or EDI Segments]()
+  - [Additional grouping of EDI Loops or EDI Segments](https://github.com/EdiNation/OpenEDI-Specification/blob/main/README.md#additional-grouping-of-edi-loops-or-edi-segments)
   - [EDI Sequences]()
 
 ## OpenEDI is an extension of OpenAPI
