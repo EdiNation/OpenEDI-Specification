@@ -68,16 +68,16 @@ EDI messages represent the different types of B2B, Healthcare or other business 
 - `x-edination-message-id` The message ID. Required.
 - `x-edination-message-version` The EDI edition and release. Required only if multiple messages with the same message ID are included in the same definition to avoid duplicates.
 
+![Example of EDI message definition for message 837P standard X12 and version 005010X222A1](https://support.edifabric.com/hc/article_attachments/360019345437/openapi-edi-message-id.png)  
 *Example of EDI message definition for message 837P standard X12 and version 005010X222A1*
-![Example of EDI message definition for message 837P standard X12 and version 005010X222A1](https://support.edifabric.com/hc/article_attachments/360019345437/openapi-edi-message-id.png)
 
 ### EDI Loop (EDI Group)
 EDI Loops represent block of EDI Segments which allows the whole block to repeat as a unit. All segments within a loop are ordered and must have distinct positions. Loops are defined as Schema objects with the following extension property:
 
 - `x-edination-loop-id` The loop ID. Required.
 
+![Example of EDI loop](https://support.edifabric.com/hc/article_attachments/360019345477/openapi-edi-loop-id.png)  
 *Example of EDI loop 2100B*
-![Example of EDI loop](https://support.edifabric.com/hc/article_attachments/360019345477/openapi-edi-loop-id.png)
 
 ### EDI Segment
 EDI Segments represent units of data known as data elements. Segments are defined as Schema objects with the following extension property:
