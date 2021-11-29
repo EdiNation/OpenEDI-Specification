@@ -76,6 +76,9 @@ EDI Loops represent block of EDI Segments which allows the whole block to repeat
 
 - `x-edination-loop-id` The loop ID. Required.
 
+*Example of EDI loop*
+![Example of EDI loop](https://support.edifabric.com/hc/article_attachments/360019345477/openapi-edi-loop-id.png)
+
 ### EDI Segment
 EDI Segments represent units of data known as data elements. Segments are defined as Schema objects with the following extension property:
 
