@@ -145,3 +145,21 @@ where:
 
 ![Example of EDI situational rules](https://support.edifabric.com/hc/article_attachments/4404421186577/edination-situational.png)  
 *Example of EDI situational rules*
+
+### Additional grouping of EDI Loops or EDI Segments
+Usually segments are grouped in loops, where each segment must have a distinct position within the loop, and the first segment in a loop is known as "trigger segment", is mandatory, and can only repeat once. A repetition of the trigger segment means that the whole loop is being repeated.
+
+OpenEDI fits multiple B2B and Healthcare formats and thus needs to cater for the following extra adjustments:
+- Segments or loops that can appear in the same position (X12 HIPAA).
+- Multiple segments or loops are allowed in the same position, but only one of the them can be present (HL7).
+- Multiple segments can be grouped together in a sequence very much like in EDI Loops, however, the first segment is not mandatory (HL7).
+
+These additional types of grouping are defined as Schema objects with the following extension property:
+
+- `x-edination-group-type` which can take the following values:
+  - `anyOf` for segments or loops that can appear in the same position, in any order
+  - `oneOf` for segments or loops that can appear in the same position, however, only one of them must be present
+  - `seqOf` for segments that can appear in order, however, can't be represented as EDI Loops because the first segment is optional
+
+![Example of EDI segments in the same position](https://support.edifabric.com/hc/article_attachments/4404421585169/edination-all.png)  
+*Example of EDI segments in the same position*
