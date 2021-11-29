@@ -117,5 +117,5 @@ The format of each array item must be `{condition designator}{start position}[ot
    - `C` Conditional. If the EDI data element in the first position is not null then all elements at the specified positions must also be not null.
    - `L` List Conditional. If any of the elements in the specified positions is not null then at least one more of the EDI data elements in the specified positions must also be not null. 
 
-![Example of EDI syntax rules](https://support.edifabric.com/hc/article_attachments/4404421186577/edination-situational.png)  
+![Example of EDI syntax rules](https://support.edifabric.com/hc/article_attachments/360019345797/openapi-edi-syntax-notes.png)  
 *Example of EDI syntax rules*
