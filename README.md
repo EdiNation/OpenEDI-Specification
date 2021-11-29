@@ -37,8 +37,8 @@ The OpenEDI Specification was created by [EdiFabric](https://www.edifabric.com/)
   - [Integration with OpenAPI](https://github.com/EdiNation/OpenEDI-Specification/blob/main/README.md#integration-with-openapi)
   - [Resolved or unresolved](https://github.com/EdiNation/OpenEDI-Specification/blob/main/README.md#resolved-or-unresolved)
   - [Case sensitivity](https://github.com/EdiNation/OpenEDI-Specification/blob/main/README.md#case-sensitivity)
-- [Supported EDI and HL7 standards]()
-  - [EANCOM GS1]()
+- [Supported EDI and HL7 standards](https://github.com/EdiNation/OpenEDI-Specification/blob/main/README.md#case-sensitivity)
+- [EDI items represented with OpenEDI]()
 
 ## OpenEDI is an extension of OpenAPI
 To model an EDI format using OpenAPI is to provide an OpenAPI definition file, with the addition of a few extension attributes.
