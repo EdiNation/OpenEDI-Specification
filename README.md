@@ -41,7 +41,7 @@ OpenEDI supports resolved OpenAPI schemas. All objects that contain one or more 
 ### Case sensitivity
 All values in the custom extensions are case sensitive and must be in upper-case.
 
-### Supported EDI and HL7 standards
+## Supported EDI and HL7 standards
 The following EDI messaging standards have already been implemented using OpenEDI:
 - [EANCOM GS1](https://www.edination.com/edi-file-formats.html?edi=EdiNation.Edifact.EAN)
 - [EDIFACT UN](https://www.edination.com/edi-file-formats.html?edi=EdiNation.Edifact.UN)
