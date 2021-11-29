@@ -4,7 +4,27 @@
 This document is licensed under [The Apache License, Version 2.0](https://www.apache.org/licenses/LICENSE-2.0.html).
 
 ## Introduction   
-The OpenEDI Specification defines a standard, language-agnostic, and format-agnostic interface to all EDI and HL7 messaging standards, allowing them to be used with HTTP APIs by both humans and computers.     
+The OpenEDI Specification defines a standard, language-agnostic, and format-agnostic interface to all EDI and HL7 messaging standards, allowing them to be used with HTTP APIs by both humans and computers.   
+
+## Table of Contents   
+- [OpenEDI is an extension of OpenAPI](https://github.com/EdiNation/OpenEDI-Specification/blob/main/README.md#openedi-is-an-extension-of-openapi)
+  - [Supported OpenAPI version](https://github.com/EdiNation/OpenEDI-Specification/blob/main/README.md#supported-openapi-version)
+  - [Integration with OpenAPI](https://github.com/EdiNation/OpenEDI-Specification/blob/main/README.md#integration-with-openapi)
+  - [Resolved or unresolved](https://github.com/EdiNation/OpenEDI-Specification/blob/main/README.md#resolved-or-unresolved)
+  - [Case sensitivity](https://github.com/EdiNation/OpenEDI-Specification/blob/main/README.md#case-sensitivity)
+- [Supported EDI and HL7 standards](https://github.com/EdiNation/OpenEDI-Specification/blob/main/README.md#case-sensitivity)
+- [EDI items represented with OpenEDI](https://github.com/EdiNation/OpenEDI-Specification/blob/main/README.md#edi-items-represented-with-openedi)
+  - [EDI Message](https://github.com/EdiNation/OpenEDI-Specification/blob/main/README.md#edi-message)
+  - [EDI Loop](https://github.com/EdiNation/OpenEDI-Specification/blob/main/README.md#edi-loop-edi-group)
+  - [EDI Segment](https://github.com/EdiNation/OpenEDI-Specification/blob/main/README.md#edi-segment)
+  - [EDI Composite Data Element](https://github.com/EdiNation/OpenEDI-Specification/blob/main/README.md#edi-composite-data-element)
+  - [EDI Data Element](https://github.com/EdiNation/OpenEDI-Specification/blob/main/README.md#edi-data-element)
+  - [EDI Syntax Rules](https://github.com/EdiNation/OpenEDI-Specification/blob/main/README.md#edi-syntax-rules)
+  - [EDI Situational Rules](https://github.com/EdiNation/OpenEDI-Specification/blob/main/README.md#edi-situational-rules)
+  - [Additional grouping of EDI Loops or EDI Segments](https://github.com/EdiNation/OpenEDI-Specification/blob/main/README.md#additional-grouping-of-edi-loops-or-edi-segments)
+  - [EDI Sequences](https://github.com/EdiNation/OpenEDI-Specification/blob/main/README.md#edi-sequences)
+
+## Definitions
 
 ### EDI and HL7
 The format of EDI documents is governed by their implementation guidelines, which in most cases (depending on the standard and the issuing party), describe it only figuratively. Hence, it is human-readable, and it is NOT in a common, machine-readable form.   
@@ -30,24 +50,6 @@ OpenEDI aims to support all parts of the SEF format, and to provide web and API-
 
 ### OpenEDI contributors
 The OpenEDI Specification was created by [EdiFabric](https://www.edifabric.com/) to support their API and Web products for modern EDI development, collectively known as [EdiNation](https://www.edination.com/). All examples in this document refer to concrete applications of the OpenEDI format in EdiNation. 
-
-## Table of Contents   
-- [OpenEDI is an extension of OpenAPI](https://github.com/EdiNation/OpenEDI-Specification/blob/main/README.md#openedi-is-an-extension-of-openapi)
-  - [Supported OpenAPI version](https://github.com/EdiNation/OpenEDI-Specification/blob/main/README.md#supported-openapi-version)
-  - [Integration with OpenAPI](https://github.com/EdiNation/OpenEDI-Specification/blob/main/README.md#integration-with-openapi)
-  - [Resolved or unresolved](https://github.com/EdiNation/OpenEDI-Specification/blob/main/README.md#resolved-or-unresolved)
-  - [Case sensitivity](https://github.com/EdiNation/OpenEDI-Specification/blob/main/README.md#case-sensitivity)
-- [Supported EDI and HL7 standards](https://github.com/EdiNation/OpenEDI-Specification/blob/main/README.md#case-sensitivity)
-- [EDI items represented with OpenEDI](https://github.com/EdiNation/OpenEDI-Specification/blob/main/README.md#edi-items-represented-with-openedi)
-  - [EDI Message](https://github.com/EdiNation/OpenEDI-Specification/blob/main/README.md#edi-message)
-  - [EDI Loop](https://github.com/EdiNation/OpenEDI-Specification/blob/main/README.md#edi-loop-edi-group)
-  - [EDI Segment](https://github.com/EdiNation/OpenEDI-Specification/blob/main/README.md#edi-segment)
-  - [EDI Composite Data Element](https://github.com/EdiNation/OpenEDI-Specification/blob/main/README.md#edi-composite-data-element)
-  - [EDI Data Element](https://github.com/EdiNation/OpenEDI-Specification/blob/main/README.md#edi-data-element)
-  - [EDI Syntax Rules](https://github.com/EdiNation/OpenEDI-Specification/blob/main/README.md#edi-syntax-rules)
-  - [EDI Situational Rules](https://github.com/EdiNation/OpenEDI-Specification/blob/main/README.md#edi-situational-rules)
-  - [Additional grouping of EDI Loops or EDI Segments](https://github.com/EdiNation/OpenEDI-Specification/blob/main/README.md#additional-grouping-of-edi-loops-or-edi-segments)
-  - [EDI Sequences](https://github.com/EdiNation/OpenEDI-Specification/blob/main/README.md#edi-sequences)
 
 ## OpenEDI is an extension of OpenAPI
 To model an EDI format using OpenAPI is to provide an OpenAPI definition file, with the addition of a few extension attributes.
