@@ -119,3 +119,22 @@ The format of each array item must be `{condition designator}{start position}[ot
 
 ![Example of EDI syntax rules](https://support.edifabric.com/hc/article_attachments/360019345797/openapi-edi-syntax-notes.png)  
 *Example of EDI syntax rules*
+
+### EDI Situational Rules
+EDI Situational Rules define intra-segment (composite data element) conditions, very much like the syntax rules, however, instead of checking for existance/non-exsistance, the situational rules check if a data element in a certain position exists or is of a certain value, then another data element needs to conform to be of another value(s). Situational rules are defined on segment/composite data element level with the following extension property:
+
+- `x-edination-situational` An array of items that represent all situational rules in the segment/composite data element. Optional.
+
+The format of each array item must be:
+- To mark "Not Used" data elements `{condition designator}{start position}[other positions]` 
+- To mark conditional required or conditional exclusion `{condition designator}{start position}{end position}_{value1}[_{other values}]`  
+where:
+1. `{start position}, {end position}` and all other positions in-between must be two-digit numeric values, 0 to 9 must be padded with a leading zero.
+2. `{value1}`, and all other values must be separated by _ (underscore).
+3. `{condition designator}` must be one of the following values:
+   - `R` Conditional Required. When the element in the second position is equal to one of the specified codes, then the first element must be not null.
+   - `E` Conditional Exclusion. When the element in the second position is equal to one of the specified codes, then the first element must be null.
+   - `N` Not used. When a "Not Used" data element's value is not null, it is marked as a validation error.
+
+![Example of EDI situational rules](https://support.edifabric.com/hc/article_attachments/4404421186577/edination-situational.png)  
+*Example of EDI situational rules*
