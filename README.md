@@ -58,10 +58,16 @@ The following EDI messaging standards have already been implemented using OpenED
 - [EDIFACT SMDG](https://www.edination.com/edi-file-formats.html?edi=EdiNation.Edifact.SMDG)
 
 ## OpenAPI Extensions for OpenEDI
+EDI implementation guidelines can be seamlessly converted to OpenEDI without losing information and avoiding any ambiguity.
 All EDI items such as message, loop, segment, or composite/data element are represented as OpenAPI Schema objects and must include their corresponding OpenEDI attribute, which is defined as a regular OpenAPI extension property.
 
 ### EDI Message
-EDI messages are defined by their EDI format, EDI version and EDI transaction ID.
+EDI messages are defined by their EDI format, EDI version (optional) and EDI transaction ID.
 
-- `x-edination-message-id` The transaction set ID. Required for message objects.
+- `x-edination-message-standard` The EDI standard, either X12 or EDIFACT. Required.
+- `x-edination-message-id` The message ID. Required.
+- `x-edination-message-version` The EDI edition and release. Required only if multiple messages with the same message ID are included in the same definition to avoid duplicates.
+
+*Example of EDI message definition for message 837P standard X12 and version 005010X222A1*
+![Example of EDI message definition for message 837P standard X12 and version 005010X222A1](https://support.edifabric.com/hc/article_attachments/360019345437/openapi-edi-message-id.png)
 
