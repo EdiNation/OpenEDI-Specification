@@ -191,7 +191,7 @@ These additional types of grouping are defined as Schema objects with the follow
 *Example of EDI segments in the same position*
 
 ### EDI Sequences
-In X12, service line numbers must be sequential, e.g., the values in the first data element in all LX segments in a repeating loop must be in sequential. This is defined on loop level with the following extension property:
+In X12, service line numbers must be sequential, e.g., the values in the first data element in all LX segments in a repeating loop must be sequential. This is defined on loop level with the following extension property:
 
 - `x-edination-loop-seq` To denote the segment within a repeating loop, that needs to be checked for sequential numbers, such as LX. The value is the position of the data element within the segment. Optional.
 
