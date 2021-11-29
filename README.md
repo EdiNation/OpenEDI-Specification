@@ -56,3 +56,12 @@ The following EDI messaging standards have already been implemented using OpenED
 - EDIGAS
 - [EDIFACT ACE](https://www.edination.com/edi-file-formats.html?edi=EdiNation.Edifact.ACE)
 - [EDIFACT SMDG](https://www.edination.com/edi-file-formats.html?edi=EdiNation.Edifact.SMDG)
+
+## OpenAPI Extensions for OpenEDI
+All EDI items such as message, loop, segment, or composite/data element are represented as OpenAPI Schema objects and must include their corresponding OpenEDI attribute, which is defined as a regular OpenAPI extension property.
+
+### EDI Message
+EDI messages are defined by their EDI format, EDI version and EDI transaction ID.
+
+- `x-edination-message-id` The transaction set ID. Required for message objects.
+
