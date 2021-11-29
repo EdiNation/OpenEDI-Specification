@@ -76,7 +76,7 @@ EDI Loops represent block of EDI Segments which allows the whole block to repeat
 
 - `x-edination-loop-id` The loop ID. Required.
 
-*Example of EDI loop*
+*Example of EDI loop 2100B*
 ![Example of EDI loop](https://support.edifabric.com/hc/article_attachments/360019345477/openapi-edi-loop-id.png)
 
 ### EDI Segment
