@@ -21,6 +21,13 @@ We combined the two, and now every EDI implementation guideline, regardless of i
 
 [Interactive example for X12 5010 837P](https://app.swaggerhub.com/apis/EdiNation/edi-nation-837P-example/2)
 
+### OpenEDI and SEF
+The Standard Exchange Format is an open standard text format, developed by the Foresight Corporation (now part of Tibco). Its purpose is to provide a machine-readable specification for EDI documents. 
+
+[SEF Guideline](https://www.edination.com/files/sef161.pdf)
+
+OpenEDI aims to support all parts of the SEF format, and to provide web and API-friendly alternative for a global EDI meta format. EdiNation offer a detailed guide on which parts of [SEF are supported by OpenEDI](https://support.edifabric.com/hc/en-us/articles/360002918137-How-to-migrate-from-SEF-to-OpenAPI), and a free online tool to [convert SEF files into OpenEDI](https://www.edination.com/edi-models-custom.html) definitions.
+
 ### OpenEDI contributors
 The OpenEDI Specification was created by [EdiFabric](https://www.edifabric.com/) to support their API and Web products for modern EDI development, collectively known as [EdiNation](https://www.edination.com/). All examples in this document refer to concrete applications of the OpenEDI format in EdiNation. 
 
