@@ -57,7 +57,7 @@ The following EDI messaging standards have already been implemented using OpenED
 - [EDIFACT ACE](https://www.edination.com/edi-file-formats.html?edi=EdiNation.Edifact.ACE)
 - [EDIFACT SMDG](https://www.edination.com/edi-file-formats.html?edi=EdiNation.Edifact.SMDG)
 
-## OpenAPI Extensions for OpenEDI
+## EDI standards represented with OpenEDI
 EDI implementation guidelines can be seamlessly converted to OpenEDI without losing information and avoiding any ambiguity.
 All EDI items such as message, loop, segment, or composite/data element are represented as OpenAPI Schema objects and must include their corresponding OpenEDI attribute, which is defined as a regular OpenAPI extension property.
 
