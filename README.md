@@ -7,6 +7,7 @@ This document is licensed under [The Apache License, Version 2.0](https://www.ap
 The OpenEDI Specification defines a standard, language-agnostic, and format-agnostic interface to all EDI and HL7 messaging standards, allowing them to be used with HTTP APIs by both humans and computers.   
 
 ## Table of Contents   
+- [Definitions]()
 - [OpenEDI is an extension of OpenAPI](https://github.com/EdiNation/OpenEDI-Specification/blob/main/README.md#openedi-is-an-extension-of-openapi)
   - [Supported OpenAPI version](https://github.com/EdiNation/OpenEDI-Specification/blob/main/README.md#supported-openapi-version)
   - [Integration with OpenAPI](https://github.com/EdiNation/OpenEDI-Specification/blob/main/README.md#integration-with-openapi)
