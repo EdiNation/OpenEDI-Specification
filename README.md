@@ -37,3 +37,22 @@ The only required OpenAPI objects are Component and Schema. All other top-level 
 OpenEDI supports resolved OpenAPI schemas. All objects that contain one or more other objects must be defined using references to those objects using the Reference object.
 
 ![OpenEDI example 837P](https://support.edifabric.com/hc/article_attachments/360019345057/openapi-edi-format.png)
+
+### Case sensitivity
+All values in the custom extensions are case sensitive and must be in upper-case.
+
+### Supported EDI and HL7 standards
+The following EDI messaging standards have already been implemented using OpenEDI:
+- [EANCOM GS1](https://www.edination.com/edi-file-formats.html?edi=EdiNation.Edifact.EAN)
+- [EDIFACT UN](https://www.edination.com/edi-file-formats.html?edi=EdiNation.Edifact.UN)
+- [X12 ASC](https://www.edination.com/edi-file-formats.html?edi=EdiNation.X12.ASC)
+- [X12 HIPAA](https://www.edination.com/edi-file-formats.html?edi=EdiNation.X12.HIPAA)
+- [HL7](https://www.edination.com/edi-file-formats.html?edi=EdiNation.HL7)
+- [NCPDP Telecommunications](https://www.edination.com/edi-file-formats.html?edi=EdiNation.NCPDP)
+- [NCPDP SCRIPT](https://www.edination.com/edi-file-formats.html?edi=EdiNation.NCPDP)
+- [VDA](https://www.edination.com/edi-file-formats.html?edi=EdiNation.Vda)
+- [IATA PADIS](https://www.edination.com/edi-file-formats.html?edi=EdiNation.Edifact.IA)
+- [X12 IAIABC](https://www.edination.com/edi-file-formats.html?edi=EdiNation.X12.IAIABC)
+- EDIGAS
+- [EDIFACT ACE](https://www.edination.com/edi-file-formats.html?edi=EdiNation.Edifact.ACE)
+- [EDIFACT SMDG](https://www.edination.com/edi-file-formats.html?edi=EdiNation.Edifact.SMDG)
