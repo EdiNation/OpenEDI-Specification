@@ -19,7 +19,7 @@ The OpenEDI Specification defines a standard, language-agnostic, and format-agno
   - [Resolved or unresolved](https://github.com/EdiNation/OpenEDI-Specification/blob/main/README.md#resolved-or-unresolved)
   - [Case sensitivity](https://github.com/EdiNation/OpenEDI-Specification/blob/main/README.md#case-sensitivity)
 - [Supported EDI and HL7 standards](https://github.com/EdiNation/OpenEDI-Specification/blob/main/README.md#case-sensitivity)
-- [EDI items represented with OpenEDI](https://github.com/EdiNation/OpenEDI-Specification/blob/main/README.md#edi-items-represented-with-openedi)
+- [OpenEDI extensions for EDI items](https://github.com/EdiNation/OpenEDI-Specification/blob/main/README.md#openedi-extensions-for-edi-items)
   - [EDI Message](https://github.com/EdiNation/OpenEDI-Specification/blob/main/README.md#edi-message)
   - [EDI Loop](https://github.com/EdiNation/OpenEDI-Specification/blob/main/README.md#edi-loop-edi-group)
   - [EDI Segment](https://github.com/EdiNation/OpenEDI-Specification/blob/main/README.md#edi-segment)
