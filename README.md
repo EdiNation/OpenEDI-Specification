@@ -62,7 +62,7 @@ EDI implementation guidelines can be seamlessly converted to OpenEDI without los
 All EDI items such as message, loop, segment, or composite/data element are represented as OpenAPI Schema objects and must include their corresponding OpenEDI attribute, which is defined as a regular OpenAPI extension property.
 
 ### EDI Message
-EDI messages are defined by their EDI format, EDI version (optional) and EDI transaction ID.
+EDI messages represent the different types of B2B, Healthcare or other business documents, such as purchase order, medical claims, or price lists. They are composed of EDI Segments (units of data) and EDI Loops (blocks of EDI Segments), that are ordered and can be repeatable. Messages are defined as Schema objects with the following extension properties:
 
 - `x-edination-message-standard` The EDI standard, either X12 or EDIFACT. Required.
 - `x-edination-message-id` The message ID. Required.
@@ -71,3 +71,12 @@ EDI messages are defined by their EDI format, EDI version (optional) and EDI tra
 *Example of EDI message definition for message 837P standard X12 and version 005010X222A1*
 ![Example of EDI message definition for message 837P standard X12 and version 005010X222A1](https://support.edifabric.com/hc/article_attachments/360019345437/openapi-edi-message-id.png)
 
+### EDI Loop (EDI Group)
+EDI Loops represent block of EDI Segments which allows the whole block to repeat as a unit. All segments within a loop are ordered and must have distinct positions. Loops are defined as Schema objects with the following extension property:
+
+- `x-edination-loop-id` The loop ID. Required.
+
+### EDI Segment
+EDI Segments represent units of data known as data elements. Segments are defined as Schema objects with the following extension property:
+
+- `x-edination-segment-id` The segment ID. Required.
