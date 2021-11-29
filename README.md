@@ -11,7 +11,7 @@ The format of EDI documents is governed by their implementation guidelines, whic
 More information about EDI can be found in our [What is EDI?](https://support.edifabric.com/hc/en-us/articles/360000291391-What-is-EDI) article.
 
 ### OpenAPI
-The OpenAPI Specification (OAS) defines a standard, language-agnostic interface to HTTP APIs which allows both humans and computers to discover and understand the capabilities of the service without access to source code, documentation, or through network traffic inspection. When properly defined, a consumer can understand and interact with the remote service with a minimal amount of implementation logic.
+The OpenAPI Specification (OAS) defines a standard, language-agnostic interface to HTTP APIs which allows both humans and computers to discover and understand the capabilities of the service without access to source code, documentation, or through network traffic inspection. 
 For more details go to [The OpenAPI Specification](https://github.com/OAI/OpenAPI-Specification).
 
 ### EDI and OpenAPI, together
@@ -20,3 +20,12 @@ OpenAPI input and output types are defined by the [Schema Object](http://spec.op
 We combined the two, and now every EDI implementation guideline, regardless of its origin or format, can easily be transposed into an OpenAPI Schema Object. 
 
 [Interactive example for X12 5010 837P](https://app.swaggerhub.com/apis/EdiNation/edi-nation-837P-example/2)
+
+## OpenEDI is an extension of OpenAPI
+To model an EDI format using OpenAPI is to provide an OpenAPI definition file, with thye addition of a few extension attributes.
+
+### Supported OpenAPI version
+OpenEDI supports OpenAPI 3+.
+
+### Integration with OpenAPI
+The only required OpenAPI objects are Component and Schema. All other top level objects, Info, Security, Tags, Paths, Servers are ignored.
