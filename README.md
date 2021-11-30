@@ -274,9 +274,9 @@ All repeatable items are defined using OpenAPI **array** object where the item's
 
 ### Convert EDI Loop to OpenEDI
 
-EDI Loops are represented as Schema objects and are marked with the `x-edination-loop-id` extension property.
+EDI Loops are represented as Schema objects and are marked with the `x-edination-loop-id` extension property. All available concepts to convert EDI Message to OpenEDI are aslo applicable for EDI Loop.
 
-### Convert EDI Segment/Composite Data Element to OpenEDI
+### Convert EDI Segment to OpenEDI
 
 The structure of each segment/composite data element is usually depicted in their implementation guidelines with schemas more or less similar to the one below:
 
@@ -311,3 +311,9 @@ All repeatable items are defined as OpenAPI **array** object where the item's ty
 - **Description**
 
 Use OpenAPI **description** attribute to pass in additional comments at each level of the EDI segment/composite element. This is optional.
+
+### Convert EDI Composite Data Element to OpenEDI
+
+EDI Composite Data Elements are represented as Schema objects and are marked with the `x-edination-composite-id` extension property. All available concepts to convert EDI Segment to OpenEDI are also applicable for EDI Composite Data Element.
+
+### Convert EDI Data Element to OpenEDI
