@@ -267,7 +267,7 @@ All non-repeatable items are defined as referenced properties, using the `$ref` 
 ![Example of non-repeatable EDI items](https://support.edifabric.com/hc/article_attachments/360019347137/edi-repetitions.png)  
 *Example of non-repeatable EDI items*
 
-All repeatable items are defined using OpenAPI `array` keyword where the item's type is a reference to the repeatable item. Use OpenAPI `minItems` and `maxItems` attributes to define the repetitions range.
+All repeatable items are defined using OpenAPI **array** object where the item's type is a reference to the repeatable item. Use OpenAPI `minItems` and `maxItems` attributes to define the repetitions range.
 
 ![Example of repeatable EDI items](https://support.edifabric.com/hc/article_attachments/360019347217/edi-min-max.png)  
 *Example of repeatable EDI items*
