@@ -319,4 +319,26 @@ EDI Composite Data Elements are represented as Schema objects and are marked wit
 
 ### Convert EDI Data Element to OpenEDI
 EDI Data Elements are represented as properties of their parent Schema object (segment or composite data element), and are marked with the `x-edination-element-id` extension property.
+The structure of each data element is usually depicted in their implementation guidelines with schemas more or less similar to the one below:
+
+![Example of EDI guideline for data elements](https://support.edifabric.com/hc/article_attachments/360019361717/edi-guide-element.png)  
+*Example of EDI guideline for data elements. The image is copyrighted by X12.org*
+
+The guideline defines the data type, the list of available EDI codes, and the minimum/maximum length. A description is also available for some or all data elements, but it is not essential.
+
+> All values in the OpenAPI **format** attribute, and in the **enum** object are case sensitive and must be set exactly as set out below.
+
+The following concepts must be used to convert the depicted structure above into properties of OpenAPI objects:
+
+- Primitive properties - when the data type is not an EDI Code (is not marked as "ID" in the guideline), you can use the following values to set the data type in the OpenAPI 'format' attribute:
+  - For the X12 Standard
+    - **X12_AN** - X12 alphanumeric
+    - **X12_NX** - X12 numeric with implied decimal, X can be any between 0 and 7
+    - **X12_DT** - X12 date
+    - **X12_TM** - X12 time
+    - **X12_RX** - X12 decimal, X is digits to the right of the decimal and can be any between 0 and 7
+  - For the EDIFACT Standard
+    - **EDIFACT_AN** - EDIFACT alphanumeric
+    - **EDIFACT_A** - EDIFACT alphabetic
+    - **EDIFACT_N** - EDIFACT numeric
 
