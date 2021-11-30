@@ -223,6 +223,10 @@ The structure of each EDI Message is usually depicted in their implementation gu
 The guideline defines the positions (the order) of all segments and loops, their IDs (the EDI codes to identify each segment and loop), the usage (mandatory or not), and the repetitions in the same position. A description is also available for some or all segments/loops but it is not essential.
 
 The following concepts must be used to convert the depicted structure above into an OpenAPI Schema object:
+- **Composition**
+
+All EDI items, such as messages, segments and loops, are represent as [OpenAPI Schema objects](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#schemaObject). All items that are contained in the Schema object, must be referenced using OpenAPI's `$ref` keyword.
+
 - **Position**  
 
 The position of the segments, loops, and data elements is inferred from the order in the schema definition. The top item (ST) is in position 0, the next item (BHT) is in position 1, etc.  
@@ -248,3 +252,11 @@ Both the "same position container" and any of the items contained in it can be r
 
 ![Example of repeatable EDI items in the same position](https://support.edifabric.com/hc/article_attachments/360019419958/edi-repeat.png)  
 *Example of repeatable EDI items in the same position*
+
+- **Usage**
+
+Bu default all Schema objects are optional. To mark a segment/loop as mandatory, use OpenAPI `required` attribute. 
+
+![Example of EDI usage](https://support.edifabric.com/hc/article_attachments/360019347097/edi-usage.png)  
+*Example of EDI usage*
+
