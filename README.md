@@ -215,3 +215,26 @@ To convert EDI Message to OpenEDI do:
    - `x-edination-message-standard` (Required)
    - `x-edination-message-version` (Optional when no other transaction sets with the same ID are used in the same definition, otherwise it is mandatory)
    - `x-edination-message-id` (Required)
+
+The structure of each EDI Message is usually depicted in their implementation guidelines with schemas more or less similar to the one below:  
+![Example of EDI guideline](https://support.edifabric.com/hc/article_attachments/360019346697/edi-guide.png)  
+*Example of EDI guideline. The image is copyrighted by X12.org*
+
+The guideline defines the positions (the order) of all segments and loops, their IDs (the EDI codes to identify each segment and loop), the usage (mandatory or not), and the repetitions in the same position. A description is also available for some or all segments/loops but it is not essential.
+
+The following concepts must be used to convert the depicted structure above into an OpenAPI Schema object:
+- **Position**  
+
+The position of the segments, loops, and data elements is inferred from the order in the schema definition. The top item (ST) is in position 0, the next item (BHT) is in position 1, etc.  
+
+![Example of EDI position](https://support.edifabric.com/hc/article_attachments/360019346737/edi-position.png)  
+*Example of EDI position*
+
+- **Multiple segments/loops in the same position** 
+
+When the guideline shows two or more loops/segments to be in the same position like the two NM1 Loops above in position 0200, then a new Schema object must be created to contain all the items in the same position.
+
+![Example of EDI items in the same position](https://support.edifabric.com/hc/article_attachments/360019419778/edi-all.png)  
+*Example of EDI items in the same position*
+
+
