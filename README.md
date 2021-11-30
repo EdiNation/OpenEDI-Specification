@@ -29,7 +29,7 @@ The OpenEDI Specification defines a standard, language-agnostic, and format-agno
   - [EDI Situational Rules](https://github.com/EdiNation/OpenEDI-Specification/blob/main/README.md#edi-situational-rules)
   - [Additional grouping of EDI Loops or EDI Segments](https://github.com/EdiNation/OpenEDI-Specification/blob/main/README.md#additional-grouping-of-edi-loops-or-edi-segments)
   - [EDI Sequences](https://github.com/EdiNation/OpenEDI-Specification/blob/main/README.md#edi-sequences)
-- [EDI Guidelines Interoperability](EDI Guidelines Interoperability)
+- [EDI Guidelines Interoperability](https://github.com/EdiNation/OpenEDI-Specification/blob/main/README.md#edi-guidelines-interoperability)
   - [Convert EDI Message to OpenEDI]()
     - [Composition]()
     - [Position]()
@@ -37,7 +37,7 @@ The OpenEDI Specification defines a standard, language-agnostic, and format-agno
     - [Usage]()
     - [Repetitions]()
   - [Convert EDI Loop to OpenEDI]()
-  - [Convert EDI Segment to OpenEDI]
+  - [Convert EDI Segment to OpenEDI]()
     - [Composition]()
     - [Repetitions]()
     - [Description]()
