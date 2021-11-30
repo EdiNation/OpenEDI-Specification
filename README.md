@@ -271,3 +271,43 @@ All repeatable items are defined using OpenAPI **array** object where the item's
 
 ![Example of repeatable EDI items](https://support.edifabric.com/hc/article_attachments/360019347217/edi-min-max.png)  
 *Example of repeatable EDI items*
+
+### Convert EDI Loop to OpenEDI
+
+EDI Loops are represented as Schema objects and are marked with the `x-edination-loop-id` extension property.
+
+### Convert EDI Segment/Composite Data Element to OpenEDI
+
+The structure of each segment/composite data element is usually depicted in their implementation guidelines with schemas more or less similar to the one below:
+
+![Example of EDI guideline for segment](https://support.edifabric.com/hc/article_attachments/360019433298/edi-guide-segment.png)  
+*Example of EDI guideline for segment. The image is copyrighted by X12.org*
+
+The guideline defines the positions (the order) of all data elements, their IDs (the EDI codes to identify each composite or simple data element), the usage (mandatory or not), and the repetitions in the same position. Additionally, every simple data element has a data type and minimum/maximum length. A description is also available for some or all data elements but it is not essential.
+
+The following concepts must be used to convert the depicted structure above into an OpenAPI Schema object:
+
+- **Composition**
+
+All non-repeatable EDI items are defined as:
+
+1. OpenAPI Schema object property of type **string** for simple data elements: 
+
+![Example of EDI data element](https://support.edifabric.com/hc/article_attachments/360019433598/edi-repetitions-segment.png)  
+*Example of EDI data element*
+
+2. OpenAPI Reference object for composite types:
+
+![Example of EDI composite data element](https://support.edifabric.com/hc/article_attachments/360019360357/edi-composite-segment.png)  
+*Example of EDI composite data element*
+
+- **Repetitions**
+
+All repeatable items are defined as OpenAPI **array** object where the item's type is "string" for simple data elements and a Reference object for composite data elements. Use OpenAPI `minItems` and `maxItems` attributes to define the repetitions range.
+
+![Example of repeatable EDI data elements](https://support.edifabric.com/hc/article_attachments/360019433618/edi-min-max-segment.png)  
+*Example of repeatable EDI data elements*
+
+- **Description**
+
+Use OpenAPI **description** attribute to pass in additional comments at each level of the EDI segment/composite element. This is optional.
