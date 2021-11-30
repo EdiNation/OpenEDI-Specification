@@ -274,10 +274,11 @@ All repeatable items are defined using OpenAPI **array** object where the item's
 
 ### Convert EDI Loop to OpenEDI
 
-EDI Loops are represented as Schema objects and are marked with the `x-edination-loop-id` extension property. All available concepts to convert EDI Message to OpenEDI are also applicable for EDI Loop.
+EDI Loops are represented as Schema objects and are marked with the `x-edination-loop-id` extension property, to set the Loop ID (when no Loop ID exists, use the ID of the trigger segment). All available concepts to convert EDI Message to OpenEDI are also applicable for EDI Loop.
 
 ### Convert EDI Segment to OpenEDI
 
+EDI Segments are represented as Schema objects and are marked with the `x-edination-segment-id` extension property, to set the Segment ID.
 The structure of each segment/composite data element is usually depicted in their implementation guidelines with schemas more or less similar to the one below:
 
 ![Example of EDI guideline for segments](https://support.edifabric.com/hc/article_attachments/360019433298/edi-guide-segment.png)  
@@ -314,6 +315,8 @@ Use OpenAPI **description** attribute to pass in additional comments at each lev
 
 ### Convert EDI Composite Data Element to OpenEDI
 
-EDI Composite Data Elements are represented as Schema objects and are marked with the `x-edination-composite-id` extension property. All available concepts to convert EDI Segment to OpenEDI are also applicable for EDI Composite Data Element.
+EDI Composite Data Elements are represented as Schema objects and are marked with the `x-edination-composite-id` extension property, to set the Composite Data Element ID. All available concepts to convert EDI Segment to OpenEDI are also applicable for EDI Composite Data Element.
 
 ### Convert EDI Data Element to OpenEDI
+EDI Data Elements are represented as properties of their parent Schema object (segment or composite data element), and are marked with the `x-edination-element-id` extension property.
+
