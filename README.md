@@ -330,7 +330,7 @@ The guideline defines the data type, the list of available EDI codes, and the mi
 
 The following concepts must be used to convert the depicted structure above into properties of OpenAPI objects:
 
-- Primitive properties - when the data type is not an EDI Code (is not marked as "ID" in the guideline), you can use the following values to set the data type in the OpenAPI 'format' attribute:
+- **Primitive properties** - when the data type is not an EDI Code (is not marked as "ID" in the guideline), you can use the following values to set the data type in the OpenAPI 'format' attribute:
   - For the X12 Standard
     - **X12_AN** - X12 alphanumeric
     - **X12_NX** - X12 numeric with implied decimal, X can be any between 0 and 7
@@ -345,9 +345,16 @@ The following concepts must be used to convert the depicted structure above into
 ![Example of EDI data element](https://support.edifabric.com/hc/article_attachments/360019361777/edi-element-type.png)  
 *Example of EDI data element*
 
-- EDI Code properties - when the data type represents the list of values allowed for the data element.
+- **EDI Code properties** - when the data type represents the list of values allowed for the data element.
 
 EDI Codes are represented as OpenAPI **enum** objects of type **string**. Data elements with EDI Code types are represented as a property of type **string** with a **Reference** object to the underlying EDI Code type, wrapped up in OpenAPI `allOf`:
 
 ![Example of EDI codes](https://support.edifabric.com/hc/article_attachments/360019361817/edi-element-code.png)  
 *Example of EDI codes*
+
+- **Minimum/maximum length**
+
+To set the minimum and/or the maximum length of the data element value use OpenAPI `minLength` and `maxLength` attributes: 
+
+![Example of EDI data element min and max length](https://support.edifabric.com/hc/article_attachments/360019435038/edi-min-max-element.png)  
+*Example of EDI data element min and max length*
