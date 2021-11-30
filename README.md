@@ -29,6 +29,7 @@ The OpenEDI Specification defines a standard, language-agnostic, and format-agno
   - [EDI Situational Rules](https://github.com/EdiNation/OpenEDI-Specification/blob/main/README.md#edi-situational-rules)
   - [Additional grouping of EDI Loops or EDI Segments](https://github.com/EdiNation/OpenEDI-Specification/blob/main/README.md#additional-grouping-of-edi-loops-or-edi-segments)
   - [EDI Sequences](https://github.com/EdiNation/OpenEDI-Specification/blob/main/README.md#edi-sequences)
+- [EDI Guidelines Interoperability]()
 
 ## Definitions
 
@@ -198,7 +199,7 @@ In X12, service line numbers must be sequential, e.g., the values in the first d
 ![Example of EDI sequence](https://support.edifabric.com/hc/article_attachments/4404421761169/edination-loop-seq.png)  
 *Example of EDI sequence in loop 2400*
 
-## Interoperability of EDI Guidelines
+## EDI Guidelines Interoperability
 The format of EDI messages is laid out in their implementation guides, either the official ones (from UN EDIFACT or ASC X12) or the respective trading partners' specific ones. The guides are meant for humans and are usually in text or PDF formats, and can't be transferred automatically from machine to machine.
 
 OpenEDI allows B2B and Healthcare partners to exchange EDI implementation guidelines in a machine-readable form so that EDI translators and applications can automatically import/verify them and thus save users considerable time in developing new translations or maps.
