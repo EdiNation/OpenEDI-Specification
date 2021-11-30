@@ -241,3 +241,10 @@ This new Schema object must be marked with the `x-edination-group-type` extensio
 
 ![Example of EDI grouping for items in the same position](https://support.edifabric.com/hc/article_attachments/4412316766737/edi-same-position.png)  
 *Example of EDI grouping for items in the same position*
+
+[List of available values for x-edination-group-type](https://github.com/EdiNation/OpenEDI-Specification/blob/main/README.md#additional-grouping-of-edi-loops-or-edi-segments)
+
+Both the "same position container" and any of the items contained in it can be repeatable.
+
+![Example of repeatable EDI items in the same position](https://support.edifabric.com/hc/article_attachments/360019419958/edi-repeat.png)  
+*Example of repeatable EDI items in the same position*
