@@ -29,7 +29,23 @@ The OpenEDI Specification defines a standard, language-agnostic, and format-agno
   - [EDI Situational Rules](https://github.com/EdiNation/OpenEDI-Specification/blob/main/README.md#edi-situational-rules)
   - [Additional grouping of EDI Loops or EDI Segments](https://github.com/EdiNation/OpenEDI-Specification/blob/main/README.md#additional-grouping-of-edi-loops-or-edi-segments)
   - [EDI Sequences](https://github.com/EdiNation/OpenEDI-Specification/blob/main/README.md#edi-sequences)
-- [EDI Guidelines Interoperability]()
+- [EDI Guidelines Interoperability](EDI Guidelines Interoperability)
+  - [Convert EDI Message to OpenEDI]()
+    - [Composition]()
+    - [Position]()
+    - [Multiple segments/loops in the same position]()
+    - [Usage]()
+    - [Repetitions]()
+  - [Convert EDI Loop to OpenEDI]()
+  - [Convert EDI Segment to OpenEDI]
+    - [Composition]()
+    - [Repetitions]()
+    - [Description]()
+  - [Convert EDI Composite Data Element to OpenEDI]()
+  - [Convert EDI Data Element to OpenEDI]()
+    - [Primitive data type]()
+    - [EDI Codes data type]()
+    - [Min and Max length]()
 
 ## Definitions
 
