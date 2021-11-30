@@ -260,3 +260,14 @@ Bu default all Schema objects are optional. To mark a segment/loop as mandatory,
 ![Example of EDI usage](https://support.edifabric.com/hc/article_attachments/360019347097/edi-usage.png)  
 *Example of EDI usage*
 
+- **Repetitions**
+
+All non-repeatable items are defined as referenced properties, using the `$ref` keyword. 
+
+![Example of non-repeatable EDI items](https://support.edifabric.com/hc/article_attachments/360019347137/edi-repetitions.png)  
+*Example of non-repeatable EDI items*
+
+All repeatable items are defined using OpenAPI 'array' keyword where the item's type is a reference to the repeatable item. Use OpenAPI `minItems` and `maxItems` attributes to define the repetitions range.
+
+![Example of repeatable EDI items](https://support.edifabric.com/hc/article_attachments/360019347217/edi-min-max.png)  
+*Example of repeatable EDI items*
