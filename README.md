@@ -198,7 +198,20 @@ In X12, service line numbers must be sequential, e.g., the values in the first d
 ![Example of EDI sequence](https://support.edifabric.com/hc/article_attachments/4404421761169/edination-loop-seq.png)  
 *Example of EDI sequence in loop 2400*
 
-## EDI Guidelines to OpenEDI
+## Interoperability of EDI Guidelines
 The format of EDI messages is laid out in their implementation guides, either the official ones (from UN EDIFACT or ASC X12) or the respective trading partners' specific ones. The guides are meant for humans and are usually in text or PDF formats, and can't be transferred automatically from machine to machine.
 
 OpenEDI allows B2B and Healthcare partners to exchange EDI implementation guidelines in a machine-readable form so that EDI translators and applications can automatically import/verify them and thus save users considerable time in developing new translations or maps.
+
+### Convert EDI Message to OpenEDI
+Each EDI message, or transaction set, is identified by the following three values:
+- **EDI Standard** - This could be X12, EDIFACT, or other, denoting the particular EDI dialect. 
+- **EDI Version** - This is the edition and release of the transaction set, for example, 004010 or D96A. 
+- **EDI Transaction Set ID** - This is the transaction set ID as specified by the standard, for example, 850 is the ID for a purchase order in the X12 standard and ORDERS is the ID for a purchase order in the EDIFACT standard.  
+
+To convert EDI Message to OpenEDI do:
+1. Represent it as a Schema object.
+2. Use the following extension properties:
+   - `x-edination-message-standard` (Required)
+   - `x-edination-message-version` (Optional when no other transaction sets with the same ID are used in the same definition, otherwise it is mandatory)
+   - `x-edination-message-id` (Required)
