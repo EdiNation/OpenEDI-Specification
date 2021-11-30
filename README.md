@@ -237,4 +237,7 @@ When the guideline shows two or more loops/segments to be in the same position l
 ![Example of EDI items in the same position](https://support.edifabric.com/hc/article_attachments/360019419778/edi-all.png)  
 *Example of EDI items in the same position*
 
+This new Schema object must be marked with the `x-edination-group-type` extension property.
 
+![Example of EDI grouping for items in the same position](https://support.edifabric.com/hc/article_attachments/4412316766737/edi-same-position.png)  
+*Example of EDI grouping for items in the same position*
