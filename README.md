@@ -207,7 +207,7 @@ OpenEDI allows B2B and Healthcare partners to exchange EDI implementation guidel
 Each EDI message, or transaction set, is identified by the following three values:
 - **EDI Standard** - This could be X12, EDIFACT, or other, denoting the particular EDI dialect. 
 - **EDI Version** - This is the edition and release of the transaction set, for example, 004010 or D96A. 
-- **EDI Transaction Set ID** - This is the transaction set ID as specified by the standard, for example, 850 is the ID for a purchase order in the X12 standard and ORDERS is the ID for a purchase order in the EDIFACT standard.  
+- **EDI Transaction Set ID** - This is the transaction set ID as specified by the standard; for example, 850 is the ID for a purchase order in the X12 standard, and ORDERS is the ID for a purchase order in the EDIFACT standard.  
 
 To convert EDI Message to OpenEDI do:
 1. Represent it as a Schema object.
@@ -220,12 +220,12 @@ The structure of each EDI Message is usually depicted in their implementation gu
 ![Example of EDI guideline](https://support.edifabric.com/hc/article_attachments/360019346697/edi-guide.png)  
 *Example of EDI guideline. The image is copyrighted by X12.org*
 
-The guideline defines the positions (the order) of all segments and loops, their IDs (the EDI codes to identify each segment and loop), the usage (mandatory or not), and the repetitions in the same position. A description is also available for some or all segments/loops but it is not essential.
+The guideline defines the positions (the order) of all segments and loops, their IDs (the EDI codes to identify each segment and loop), the usage (mandatory or not), and the repetitions in the same position. A description is also available for some or all segments/loops, but it is not essential.
 
 The following concepts must be used to convert the depicted structure above into an OpenAPI Schema object:
 - **Composition**
 
-All EDI items, such as messages, segments and loops, are represent as [OpenAPI Schema objects](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#schemaObject). All items that are contained in the Schema object, must be referenced using OpenAPI's `$ref` keyword.
+All EDI items, such as messages, segments, and loops, are represented as [OpenAPI Schema objects](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#schemaObject). All items that are contained in the Schema object must be referenced using OpenAPI's `$ref` keyword.
 
 - **Position**  
 
@@ -236,7 +236,7 @@ The position of the segments, loops, and data elements is inferred from the orde
 
 - **Multiple segments/loops in the same position** 
 
-When the guideline shows two or more loops/segments to be in the same position like the two NM1 Loops above in position 0200, then a new Schema object must be created to contain all the items in the same position.
+When the guideline shows two or more loops/segments in the same position as the two NM1 Loops above in position 0200, a new Schema object must be created to contain all the items in the same position.
 
 ![Example of EDI items in the same position](https://support.edifabric.com/hc/article_attachments/360019419778/edi-all.png)  
 *Example of EDI items in the same position*
@@ -255,7 +255,7 @@ Both the "same position container" and any of the items contained in it can be r
 
 - **Usage**
 
-Bu default all Schema objects are optional. To mark a segment/loop as mandatory, use OpenAPI `required` attribute. 
+Bu default, all Schema objects are optional. To mark a segment/loop as mandatory, use OpenAPI `required` attribute. 
 
 ![Example of EDI usage](https://support.edifabric.com/hc/article_attachments/360019347097/edi-usage.png)  
 *Example of EDI usage*
@@ -274,16 +274,16 @@ All repeatable items are defined using OpenAPI **array** object where the item's
 
 ### Convert EDI Loop to OpenEDI
 
-EDI Loops are represented as Schema objects and are marked with the `x-edination-loop-id` extension property. All available concepts to convert EDI Message to OpenEDI are aslo applicable for EDI Loop.
+EDI Loops are represented as Schema objects and are marked with the `x-edination-loop-id` extension property. All available concepts to convert EDI Message to OpenEDI are also applicable for EDI Loop.
 
 ### Convert EDI Segment to OpenEDI
 
 The structure of each segment/composite data element is usually depicted in their implementation guidelines with schemas more or less similar to the one below:
 
-![Example of EDI guideline for segment](https://support.edifabric.com/hc/article_attachments/360019433298/edi-guide-segment.png)  
-*Example of EDI guideline for segment. The image is copyrighted by X12.org*
+![Example of EDI guideline for segments](https://support.edifabric.com/hc/article_attachments/360019433298/edi-guide-segment.png)  
+*Example of EDI guideline for segments. The image is copyrighted by X12.org*
 
-The guideline defines the positions (the order) of all data elements, their IDs (the EDI codes to identify each composite or simple data element), the usage (mandatory or not), and the repetitions in the same position. Additionally, every simple data element has a data type and minimum/maximum length. A description is also available for some or all data elements but it is not essential.
+The guideline defines the positions (the order) of all data elements, their IDs (the EDI codes to identify each composite or simple data element), the usage (mandatory or not), and the repetitions in the same position. Additionally, every simple data element has a data type and minimum/maximum length. A description is also available for some or all data elements, but it is not essential.
 
 The following concepts must be used to convert the depicted structure above into an OpenAPI Schema object:
 
