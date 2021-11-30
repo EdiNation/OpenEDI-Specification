@@ -34,7 +34,7 @@ The OpenEDI Specification defines a standard, language-agnostic, and format-agno
   - [Convert EDI Loop to OpenEDI](https://github.com/EdiNation/OpenEDI-Specification/blob/main/README.md#convert-edi-loop-to-openedi)
   - [Convert EDI Segment to OpenEDI](https://github.com/EdiNation/OpenEDI-Specification/blob/main/README.md#convert-edi-segment-to-openedi)
   - [Convert EDI Composite Data Element to OpenEDI](https://github.com/EdiNation/OpenEDI-Specification/blob/main/README.md#convert-edi-composite-data-element-to-openedi)
-  - [Convert EDI Data Element to OpenEDI]()
+  - [Convert EDI Data Element to OpenEDI](https://github.com/EdiNation/OpenEDI-Specification/blob/main/README.md#convert-edi-data-element-to-openedi)
     - [Primitive data type]()
     - [EDI Codes data type]()
     - [Min and Max length]()
