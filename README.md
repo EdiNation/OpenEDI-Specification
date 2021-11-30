@@ -303,7 +303,7 @@ All non-repeatable EDI items are defined as:
 
 - **Repetitions**
 
-All repeatable items are defined as OpenAPI **array** object where the item's type is "string" for simple data elements and a Reference object for composite data elements. Use OpenAPI `minItems` and `maxItems` attributes to define the repetitions range.
+All repeatable items are defined as OpenAPI **array** objects where the item's type is "string" for simple data elements and a Reference object for composite data elements. Use OpenAPI `minItems` and `maxItems` attributes to define the repetitions range.
 
 ![Example of repeatable EDI data elements](https://support.edifabric.com/hc/article_attachments/360019433618/edi-min-max-segment.png)  
 *Example of repeatable EDI data elements*
