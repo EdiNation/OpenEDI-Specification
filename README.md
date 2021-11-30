@@ -342,7 +342,7 @@ The following concepts must be used to convert the depicted structure above into
     - **EDIFACT_A** - EDIFACT alphabetic
     - **EDIFACT_N** - EDIFACT numeric
 
-![Example of EDI data element](https://support.edifabric.com/hc/article_attachments/360019361817/edi-element-code.png)  
+![Example of EDI data element](https://support.edifabric.com/hc/article_attachments/360019361777/edi-element-type.png)  
 *Example of EDI data element*
 
 - EDI Code properties - when the data type represents the list of values allowed for the data element.
