@@ -342,3 +342,12 @@ The following concepts must be used to convert the depicted structure above into
     - **EDIFACT_A** - EDIFACT alphabetic
     - **EDIFACT_N** - EDIFACT numeric
 
+![Example of EDI data element](https://support.edifabric.com/hc/article_attachments/360019361817/edi-element-code.png)  
+*Example of EDI data element*
+
+- EDI Code properties - when the data type represents the list of values allowed for the data element.
+
+EDI Codes are represented as OpenAPI **enum** objects of type **string**. Data elements with EDI Code types are represented as a property of type **string** with a **Reference** object to the underlying EDI Code type, wrapped up in OpenAPI `allOf`:
+
+![Example of EDI codes](https://support.edifabric.com/hc/article_attachments/360019361817/edi-element-code.png)  
+*Example of EDI codes*
