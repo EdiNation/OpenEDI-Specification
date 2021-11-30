@@ -197,3 +197,8 @@ In X12, service line numbers must be sequential, e.g., the values in the first d
 
 ![Example of EDI sequence](https://support.edifabric.com/hc/article_attachments/4404421761169/edination-loop-seq.png)  
 *Example of EDI sequence in loop 2400*
+
+## EDI Guidelines to OpenEDI
+The format of EDI messages is laid out in their implementation guides, either the official ones (from UN EDIFACT or ASC X12) or the respective trading partners' specific ones. The guides are meant for humans and are usually in text or PDF formats, and can't be transferred automatically from machine to machine.
+
+OpenEDI allows B2B and Healthcare partners to exchange EDI implementation guidelines in a machine-readable form so that EDI translators and applications can automatically import/verify them and thus save users considerable time in developing new translations or maps.
