@@ -92,7 +92,7 @@ The following EDI messaging standards have already been implemented using OpenED
 - [VDA](https://www.edination.com/edi-file-formats.html?edi=EdiNation.Vda)
 - [IATA PADIS](https://www.edination.com/edi-file-formats.html?edi=EdiNation.Edifact.IA)
 - [X12 IAIABC](https://www.edination.com/edi-file-formats.html?edi=EdiNation.X12.IAIABC)
-- EDIGAS
+- [EDIGAS](https://www.edination.com/edi-file-formats.html?edi=EdiNation.Edifact.EG)
 - [EDIFACT ACE](https://www.edination.com/edi-file-formats.html?edi=EdiNation.Edifact.ACE)
 - [EDIFACT SMDG](https://www.edination.com/edi-file-formats.html?edi=EdiNation.Edifact.SMDG)
 
